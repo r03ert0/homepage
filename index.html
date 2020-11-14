@@ -1,11 +1,12 @@
 <html>
 <body>
   <h2>Homepage</h2>
-  <input type="text" style="width:400px" onchange="stripParams()" />
+  <input type="text" style="width:100%" onchange="stripParams()" />
   <script>
     function stripParams() {
       const val = document.querySelector("input").value;
-      console.log(val);
+      const urlWithoutParams = val.split("?")[0];
+      location.href = urlWithoutParams;
     }
   </script>
 </body>
