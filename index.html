@@ -1,5 +1,12 @@
 <html>
 <body>
-Homepage
+  <h2>Homepage</h2>
+  <input type="text" style="width:400px" onchange="stripParams()" />
+  <script>
+    function stripParams() {
+      const val = document.querySelector("input").value;
+      console.log(val);
+    }
+  </script>
 </body>
 </html>
